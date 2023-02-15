@@ -2,28 +2,26 @@
 
 Voici les informations pour l'utilisation de l'environnement de CyberQuébec.
 
-### Connexion au VPN
+## Connexion au VPN
 Pour vous connecter au VPN, naviguez à l'adresse [https://vpn.cyberquebec.org](https://vpn.cyberquebec.org) et entrez avec votre compte.
 
-### Connexion au CyberRange
+## Connexion au CyberRange
 Une fois connectée au VPN, cliquez sur **OpenNebula** ou sur **OpenNebula - Preview** et utilisez les mêmes identifiants pour rejoindre le CyberRange.
 
 ![Connexion au VPN](img/ConnexionVPN.png)
 
 
-### Connexion aux machines virtuelles avec OpenNebula  
-Une fois connectée, vous arrivez à votre tableau de bord. Pour accéder à vos VMs, cliquez sur le carré du groupe.
+## Connexion aux machines virtuelles avec OpenNebula - Preview  
+Une fois connectée, vous arrivez à votre tableau de bord. Pour accéder à vos VMs, cliquez sur le + à côté d'Instances.
 
-![Accès aux VMs](img/groupeVMs.png)
+![Ouvrir Instances](img/OuvrirInstances.png)
 
-Cliquez sur la VM que vous voulez accéder.  
+Cliquez sur VMs.  
+![Ouvrir VMs](img/OuvrirVMs.png)
 
-![Accès à une VM](img/AccesVM.png)
-
-
-Pour vous connecter sur une machine, cliquez sur l'icône d'écran vis-à-vis la machine souhaitée et choisissez VNC. 
+Pour vous connecter sur une machine, cliquez sur l'icône d'écran vis-à-vis la machine souhaitée. 
  
-![Connexion à une VM](img/ConnexionVM.png)
+![Connexion à une VM](img/ConnexionVM2.png)
 
 
 Les identifiants des machines virtuelles sont :  
@@ -36,17 +34,20 @@ Les VMs serveurs ont des adresses statiques. Vous pouvez leur assigner une adres
 sudo dhclient -v ens3
 ```
 
-### Connexion aux machines virtuelles avec OpenNebula - Preview  
-Une fois connectée, vous arrivez à votre tableau de bord. Pour accéder à vos VMs, cliquez sur le + à côté d'Instances.
 
-![Ouvrir Instances](img/OuvrirInstances.png)
+## Connexion aux machines virtuelles avec OpenNebula  
+Une fois connectée, vous arrivez à votre tableau de bord. Pour accéder à vos VMs, cliquez sur le carré du groupe.
 
-Cliquez sur VMs.  
-![Ouvrir VMs](img/OuvrirVMs.png)
+![Accès aux VMs](img/groupeVMs.png)
 
-Pour vous connecter sur une machine, cliquez sur l'icône d'écran vis-à-vis la machine souhaitée. 
+Cliquez sur la VM que vous voulez accéder.  
+
+![Accès à une VM](img/AccesVM.png)
+
+
+Pour vous connecter sur une machine, cliquez sur l'icône d'écran vis-à-vis la machine souhaitée et choisissez VNC. 
  
-![Connexion à une VM](img/ConnexionVM2.png)
+![Connexion à une VM](img/ConnexionVM.png)
 
 
 Les identifiants des machines virtuelles sont :  
