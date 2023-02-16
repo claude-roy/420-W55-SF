@@ -34,6 +34,11 @@ Les VMs serveurs ont des adresses statiques. Vous pouvez leur assigner une adres
 sudo dhclient -v ens3
 ```
 
+Cette commande fonctionne pour toute VM Linux, vous devez remplacer le nom de l'interface par celui de votre Linux. Pour trouver le nom de l'interface :
+
+```bash
+ip link
+```
 
 ## Connexion aux machines virtuelles avec OpenNebula  
 Une fois connectée, vous arrivez à votre tableau de bord. Pour accéder à vos VMs, cliquez sur le carré du groupe.
@@ -58,5 +63,11 @@ Les VMs serveurs ont des adresses statiques. Vous pouvez leur assigner une adres
 
 ```bash
 sudo dhclient -v ens3
+```
+
+Cette commande fonctionne pour toute VM Linux, vous devez remplacer le nom de l'interface par celui de votre Linux. Pour trouver le nom de l'interface :
+
+```bash
+ip link
 ```
 
