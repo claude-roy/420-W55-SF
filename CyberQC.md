@@ -8,9 +8,6 @@ Pour vous connecter au VPN, naviguez à l'adresse [https://vpn.cyberquebec.org](
 ## Connexion au CyberRange
 Une fois connectée au VPN, cliquez sur **OpenNebula** ou sur **OpenNebula - Preview** et utilisez les mêmes identifiants pour rejoindre le CyberRange.
 
-![Connexion au VPN](img/ConnexionVPN.png)
-
-
 ## Connexion aux machines virtuelles avec OpenNebula - Preview  
 Une fois connectée, vous arrivez à votre tableau de bord. Pour accéder à vos VMs, cliquez sur le + à côté d'Instances.
 
