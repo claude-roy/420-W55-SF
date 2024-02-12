@@ -6,36 +6,7 @@ Voici les informations pour l'utilisation de l'environnement de CyberQuébec.
 Pour vous connecter au VPN, naviguez à l'adresse [https://vpn.cyberquebec.org](https://vpn.cyberquebec.org) et entrez avec votre compte.
 
 ## Connexion au CyberRange
-Une fois connectée au VPN, cliquez sur **OpenNebula** ou sur **OpenNebula - Preview** et utilisez les mêmes identifiants pour rejoindre le CyberRange.
-
-## Connexion aux machines virtuelles avec OpenNebula - Preview  
-Une fois connectée, vous arrivez à votre tableau de bord. Pour accéder à vos VMs, cliquez sur le + à côté d'Instances.
-
-![Ouvrir Instances](img/OuvrirInstances.png)
-
-Cliquez sur VMs.  
-![Ouvrir VMs](img/OuvrirVMs.png)
-
-Pour vous connecter sur une machine, cliquez sur l'icône d'écran vis-à-vis la machine souhaitée. 
- 
-![Connexion à une VM](img/ConnexionVM2.png)
-
-
-Les identifiants des machines virtuelles sont :  
-- Nom d'utilisateur: env-admin  
-- Mot de passe: admin-env
-
-Les VMs serveurs ont des adresses statiques. Vous pouvez leur assigner une adresse dans le réseau 192.168.1.0/24 ou utiliser la commande :
-
-```bash
-sudo dhclient -v ens3
-```
-
-Cette commande fonctionne pour toute VM Linux, vous devez remplacer le nom de l'interface par celui de votre Linux. Pour trouver le nom de l'interface :
-
-```bash
-ip link
-```
+Une fois connectée au VPN, cliquez sur **OpenNebula** et utilisez les mêmes identifiants pour rejoindre le CyberRange.
 
 ## Connexion aux machines virtuelles avec OpenNebula  
 Une fois connectée, vous arrivez à votre tableau de bord. Pour accéder à vos VMs, cliquez sur le carré du groupe.
@@ -56,7 +27,7 @@ Les identifiants des machines virtuelles sont :
 - Nom d'utilisateur: env-admin  
 - Mot de passe: admin-env
 
-Les VMs serveurs ont des adresses statiques. Vous pouvez leur assigner une adresse dans le réseau 192.168.1.0/24 ou utiliser la commande :
+Les VMs ont des adresses dynamiques. Vous pouvez renouveler une adresse dans le réseau avec la commande suivante ou passer par Network Manager :
 
 ```bash
 sudo dhclient -v ens3
@@ -68,3 +39,11 @@ Cette commande fonctionne pour toute VM Linux, vous devez remplacer le nom de l'
 ip link
 ```
 
+
+### Instantanés (snapshot)
+
+Pour créer un instantané, cliquer sur **Instantanés**, puis sur **Prendre un instantané**.  
+![Prendre instantané](img/instantan01.png)  
+
+Pour revenir à un instantané, cliquer sur **Revenir**.  
+![Revenir à un instantané](img/instantan02.png)  
