@@ -132,6 +132,19 @@ Pour lancer les services, à partir du répertoire ```~/docker``` :
 docker compose up -d
 ```  
 
+## Configuration des applications  
+
+Après le lancement des applications, vous devez faire quelques configurations.
+
+### Configurations Mutillidae II
+
+L'application Mutillidae II s'exécute sur le port 80, donc pour atteindre l'application vous devez ouvrir un navigateur à http://localhost.  
+
+Au premier lancement, vous devrez configurer la base de données.
+
+![Configuration de la DB de Mutillidae II.](./img/mutillidae_BD_Setup.png)  
+**Figure 1 : configuration de la DB de Mutillidae II.**  
+
 ## Références
 
 <https://docs.docker.com/engine/install/ubuntu/>  
