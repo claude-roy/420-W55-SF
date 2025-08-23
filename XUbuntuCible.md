@@ -31,7 +31,7 @@ sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyring
 sudo chmod a+r /etc/apt/keyrings/docker.asc
 ```  
 
-Ajouter le dépôt officile de Docker :  
+Ajouter le dépôt officiel de Docker :  
 
 ```bash
 echo \
@@ -106,7 +106,7 @@ En enlevant les entrées *127.0.0.1:*, ça permet d'exposer l'application en deh
 
 Pour lancer l'application dvwa, vous allez utiliser l'image sagikazarmark/dvwa. Vous pouvez la lancer par la ligne de commande, mais je vous recommande d'utiliser un fichier Docker Compose qui va lancer dvwa et mutillidae en même temps.  
 
-Dans le répertoire ```~/docker``` créer un fichier ```compose.yaml``` comme suit :
+Dans le répertoire ```~/docker```, créez un fichier ```compose.yaml``` comme suit :
 
 ```yaml
 # compose.yaml
@@ -132,6 +132,13 @@ Pour lancer les services, à partir du répertoire ```~/docker``` :
 docker compose up -d
 ```  
 
+Une fois les applications configurées, vous pouvez arrêter et lancer vos applications avec les commandes suivantes :
+
+```bash
+docker compose stop
+docker compose start
+```  
+
 ## Configuration des applications  
 
 Après le lancement des applications, vous devez faire quelques configurations.
@@ -144,6 +151,51 @@ Au premier lancement, vous devrez configurer la base de données.
 
 ![Configuration de la DB de Mutillidae II.](./img/mutillidae_BD_Setup.png)  
 **Figure 1 : configuration de la DB de Mutillidae II.**  
+
+Après la première configuration de la base de données, vous avez la page d'accueil.
+
+![Page d'accueil de Mutillidae II.](./img/mutillidae_PageAcceuil.png)  
+**Figure 2 : page d'accueil de Mutillidae II.**  
+
+Vous pouvez remettre à zéro la BD en cliquant sur **Reset DB** du menu du haut.  
+
+Au port 81 <http://localhost:81>, vous avez la page de phpMyAdmin.  
+
+![phpMyAdmin.](./img/phpMyAdmin.png)  
+**Figure 3 : phpMyAdmin.**  
+
+Au port 82 <http://localhost:82>, vous avez la page de LDAP admin.  
+
+![LDAP admin.](./img/LDAP-admin.png)  
+**Figure 4 : LDAP admin.**  
+
+Vous pouvez vous connecter en cliquant sur *login* et en utilisant les informations suivantes :  
+
+- **Login DN** : cn=admin,dc=mutillidae,dc=localhost  
+- **Password** : mutillidae  
+
+![LDAP admin login.](./img/LDAP-admin_login.png)  
+**Figure 5 : LDAP admin login.**  
+
+L'arbre du DC sera vide, vous devez importer les informations. Vous pouvez aller chercher l'information dans la configuration du github officiel ou utiliser le fichier suivant : [fichier de configuration de LDAP](extra/mutillidae.ldif).  
+
+Vous devez cliquer sur *import*, puis copier-coller les informations contenues dans le fichier ```mutillidae.ldif```. Vous pouvez ignorer les erreurs.  
+
+![Importation des configurations de LDAP.](./img/importLDAP.png)  
+**Figure 6 : Importation des configurations de LDAP.**  
+
+### Configurations DVWA  
+
+Pour vous connecter sur l'application dvwa, vous devez aller au port 8080 : <http://localhost:8080>.  
+
+Le nom d'utilisateur et le mot de passe sont : **admin / password**.  
+
+Vous devez également configurer la base de données de dvwa.
+
+![Création de la BD de dvwa.](./img/dvwa_BDCreate.png)  
+**Figure 7 : création de la BD de dvwa.**  
+
+Une fois la base de données créée, vous devrez vous reconnecter.  
 
 ## Références
 
